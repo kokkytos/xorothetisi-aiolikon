@@ -1,0 +1,16 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "name": "xorothetisi-aiolikon",
+  "description": "Αναπαραγώγιμη ανάλυση χωροθέτησης ανεμογεννητριών βάσει ανέμου, κλίσης, ορατότητας και Natura 2000.",
+  "version": "1.0.0",
+  "license": "https://spdx.org/licenses/MIT",
+  "codeRepository": "https://github.com/kokkytos/xorothetisi-aiolikon/",
+  "programmingLanguage": "Python",
+  "runtimePlatform": "Python 3.12",
+  "softwareRequirements": ["gdal", "geopandas", "rasterio", "shapely", "numpy", "pyyaml"],
+  "author": [{"@type": "Person", "givenName": "Leonidas", "familyName": "Liakos",
+              "@id": "https://orcid.org/0000-0003-1961-6940",
+              "affiliation": {"@type": "Organization", "name": "University of Thessaly"}}],
+  "keywords": ["χωροθέτηση", "viewshed", "Natura 2000", "reproducible research"]
+}

@@ -1,0 +1,59 @@
+# Όλες οι παράμετροι και οι είσοδοι της ανάλυσης. Οι διαδρομές είναι σχετικές με αυτόν τον φάκελο.
+region_name: "ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΙΩΑΝΝΙΝΩΝ"
+
+parameters:
+  min_wind_speed: 6        # m/s     - κρατιούνται κελιά με άνεμο > τιμή
+  max_slope: 15            # μοίρες  - κρατιούνται κελιά με κλίση < τιμή
+  viewshed_radius: 2000    # m       - ακτίνα παρατήρησης από κάθε οικισμό
+  observer_height: 2       # m       - ύψος παρατηρητή
+  target_height: 200       # m       - ύψος στόχου (ανεμογεννήτρια)
+  buffer_distance: 5000    # m       - buffer γύρω από την ΠΕ για την επιλογή οικισμών
+
+inputs:
+  dem: data/raw/DEM_2100.tif
+  wind: data/raw/GRC_wind-speed_100m.tif
+  regional_units: data/raw/RegionalUnits2021.shp
+  settlements: data/raw/oikismoi.gpkg
+  natura: data/raw/N2000_spatial_GR_2020_08_10.shp
+
+output: data/processed/xorothetisi.gpkg
+
+# Μεταδεδομένα που περνούν στο datapackage.json.
+metadata:
+  title: "Περιοχές χωροθέτησης στην ΠΕ Ιωαννίνων βάσει ανέμου, κλίσης, ορατότητας και Natura 2000"
+  description: >-
+    Πολύγωνα περιοχών που πληρούν τα κριτήρια ταχύτητας ανέμου, κλίσης εδάφους,
+    μη ορατότητας από οικισμούς και εκτός περιοχών Natura 2000.
+  license_code: MIT
+  license_data: CC-BY-4.0
+  authors:
+    - name: "Liakos, Leonidas"
+      orcid: "https://orcid.org/0000-0003-1961-6940"
+      affiliation: "Πανεπιστήμιο Θεσσαλίας, Τμήμα Μηχανικών Χωροταξίας, Πολεοδομίας και Περιφερειακής Ανάπτυξης"
+  keywords: [χωροθέτηση, αιολική ενέργεια, viewshed, Natura 2000, GIS, Ιωάννινα]
+  sources:
+    dem:
+      title: "Ψηφιακό μοντέλο εδάφους (SRTM Digital Elevation Data Version 4)"
+      url: "https://developers.google.com/earth-engine/datasets/catalog/CGIAR_SRTM90_V4"
+      version: "4.0"
+      license: "Users are prohibited from any commercial, non-free resale, or redistribution without explicit written permission from CIAT. Users should acknowledge CIAT as the source used in the creation of any reports, publications, new data sets, derived products, or services resulting from the use of this data set. CIAT also request reprints of any publications and notification of any redistributing efforts. For commercial access to the data, send requests to Andy Jarvis."
+    wind:
+      title: "Ταχύτητα ανέμου στα 100 m"
+      url: "https://globalwindatlas.info/api/gis/country/GRC/wind-speed/100"
+      version: "version 4.0"
+      license: "Creative Commons Attribution 4.0 International license, CC BY 4.0"
+    regional_units:
+      title: "Περιφερειακές Ενότητες 2021"
+      url: "https://www.statistics.gr/documents/20181/1194366/PERIF_ENOT_2021.zip/8fd47af0-7ae6-c186-1a51-5c51404764bc"
+      version: "2021"
+      license: "-"
+    settlements:
+      title: "Οικισμοί 2021"
+      url: "https://www.statistics.gr/documents/20181/1194366/OIKISMOI_2021.zip/fa7278b0-fc2c-c085-4c92-9b699fda7118"
+      version: "2021"
+      license: "-"
+    natura:
+      title: "Θεσμοθετημένες περιοχές NATURA 2000 Ελλάδας"
+      url: "https://data.gov.gr/dataset/thesmothetimenes-perioches-natura-2000"
+      version: "31"
+      license: "Δημόσια - ανοικτά δεδομένα"
