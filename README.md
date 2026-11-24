@@ -31,7 +31,7 @@ make run       # παράγει data/processed/*
 των βιβλιοθηκών και το git commit στο `data/processed/provenance.json`.
 Μετά από επιτυχημένη εκτέλεση τρέξε `make lock` και κάνε commit το `environment.lock.txt`.
 
-Το `codemeta.json` **δεν γράφεται με το χέρι**: παράγεται από το `CITATION.cff`
+Το `codemeta.json παράγεται αυτόματα από το `CITATION.cff`
 και το `codemeta.extra.json` (τεχνικά πεδία). Μετά από κάθε αλλαγή στο `CITATION.cff` ή πριν από κάθε release:
 
 ```bash
@@ -54,15 +54,15 @@ make check-codemeta    # αποτυγχάνει αν το codemeta.json είνα
 | F1 Μόνιμο αναγνωριστικό | DOI από το Zenodo |
 | F2 Πλούσια μεταδεδομένα | `CITATION.cff`, `codemeta.json`, `datapackage.json` |
 | F3 Τα μεταδεδομένα περιέχουν το αναγνωριστικό των δεδομένων | path + SHA-256 στο `datapackage.json`, DOI στο `CITATION.cff` |
-| F4 Ευρετηρίαση | Zenodo + keywords |
-| A1 Πρόσβαση με τυπικό πρωτόκολλο | HTTPS (GitHub, Zenodo) |
-| A2 Μεταδεδομένα διαθέσιμα και χωρίς τα δεδομένα | Zenodo | 
-| I1 Τυπική γλώσσα | GeoPackage, YAML, JSON, CFF, CodeMeta | 
-| I2 Λεξιλόγια | EPSG, SPDX άδειες, ISO 8601 | 
+| F4 Ευρετηρίαση | Το Zenodo ευρετηριάζεται από μηχανές αναζήτησης και υπηρεσίες όπως το DataCite. Χρήση keywords |
+| A1 Πρόσβαση με τυπικό πρωτόκολλο | HTTPS (GitHub, Zenodo), χωρίς λογαριασμό, με ανοιχτό API |
+| A2 Μεταδεδομένα διαθέσιμα και χωρίς τα δεδομένα | Το Zenodo διατηρεί τα μεταδεδομένα ακόμη κι αν ένα αρχείο αφαιρεθεί | 
+| I1 Τυπική γλώσσα | Ανοιχτές μορφές (GeoPackage, JSON, YAML), EPSG, SPDX,codemeta και συνδέσεις με τις πηγές μέσω Related identifiers | 
+| I2 Λεξιλόγια | Σύστημα αναφοράς: EPSG, Άδειες: MIT και CC-BY-4.0 είναι αναγνωριστικά SPDX, Ημερομηνίες: ISO 8601 | 
 | I3 Αναφορές σε άλλα δεδομένα | `metadata.sources` με URL/έκδοση/άδεια | 
 | R1 Επαρκή χαρακτηριστικά | schema πεδίων στο `datapackage.json` |
-| R1.1 Άδεια χρήσης | MIT (κώδικας), CC BY 4.0 (αποτελέσματα) | 
-| R1.2 Provenance | `provenance.json` |
+| R1.1 Άδεια χρήσης | MIT για τον κώδικα, CC BY 4.0 για τα αποτελέσματα | 
+| R1.2 Provenance | `provenance.json` (παράμετροι, hashes, εκδόσεις, commit)|
 | R1.3 Πρότυπα κοινότητας | Frictionless, CFF, CodeMeta | Προαιρετικά: ISO 19115/INSPIRE |
 
 
