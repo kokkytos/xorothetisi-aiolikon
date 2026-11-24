@@ -2,16 +2,19 @@ cff-version: 1.2.0
 message: "Αν χρησιμοποιείς αυτό το λογισμικό ή τα δεδομένα του, παρακαλούμε να το αναφέρεις ως εξής."
 title: "xorothetisi-aiolikon: αναπαραγώγιμη ανάλυση χωροθέτησης ανεμογεννητριών με GIS"
 version: 1.0.0
-date-released: "2026-11-17"
+date-released: "2026-11-24"
 license: MIT
 type: software
+abstract: >-
+  Αναπαραγώγιμη ανάλυση χωροθέτησης ανεμογεννητριών βάσει ταχύτητας ανέμου, κλίσης εδάφους,
+  ορατότητας από οικισμούς (viewshed) και περιοχών Natura 2000.
 authors:
   - family-names: "Liakos"
     given-names: "Leonidas"
     orcid: "https://orcid.org/0000-0003-1961-6940"
     affiliation: "University of Thessaly"
 repository-code: "https://github.com/kokkytos/xorothetisi-aiolikon"
-# doi: "10.5281/zenodo.XXXXXXX"   # συμπλήρωσε μετά την πρώτη δημοσίευση στο Zenodo
+doi: "10.5072/zenodo.647573"
 keywords:
   - χωροθέτηση
   - wind siting

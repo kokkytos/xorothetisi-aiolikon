@@ -1,0 +1,7 @@
+{
+  "programmingLanguage": "Python",
+  "runtimePlatform": "Python 3.12",
+  "operatingSystem": ["Linux", "macOS", "Windows"],
+  "softwareRequirements": ["gdal>=3.6", "geopandas>=1.0", "rasterio>=1.3", "shapely>=2.0", "numpy", "pyyaml"],
+  "developmentStatus": "active"
+}

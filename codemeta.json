@@ -1,16 +1,47 @@
 {
   "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "SoftwareSourceCode",
-  "name": "xorothetisi-aiolikon",
-  "description": "Αναπαραγώγιμη ανάλυση χωροθέτησης ανεμογεννητριών βάσει ανέμου, κλίσης, ορατότητας και Natura 2000.",
-  "version": "1.0.0",
+  "author": [
+    {
+      "@id": "https://orcid.org/0000-0003-1961-6940",
+      "@type": "Person",
+      "affiliation": {
+        "@type": "Organization",
+        "legalName": "University of Thessaly"
+      },
+      "familyName": "Liakos",
+      "givenName": "Leonidas"
+    }
+  ],
+  "codeRepository": "https://github.com/kokkytos/xorothetisi-aiolikon",
+  "datePublished": "2026-11-24",
+  "description": "Αναπαραγώγιμη ανάλυση χωροθέτησης ανεμογεννητριών βάσει ταχύτητας ανέμου, κλίσης εδάφους, ορατότητας από οικισμούς (viewshed) και περιοχών Natura 2000.",
+  "developmentStatus": "active",
+  "identifier": "https://doi.org/10.5072/zenodo.647573",
+  "keywords": [
+    "χωροθέτηση",
+    "wind siting",
+    "viewshed",
+    "Natura 2000",
+    "reproducible research"
+  ],
   "license": "https://spdx.org/licenses/MIT",
-  "codeRepository": "https://github.com/kokkytos/xorothetisi-aiolikon/",
+  "name": "xorothetisi-aiolikon: αναπαραγώγιμη ανάλυση χωροθέτησης ανεμογεννητριών με GIS",
+  "operatingSystem": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
   "programmingLanguage": "Python",
   "runtimePlatform": "Python 3.12",
-  "softwareRequirements": ["gdal", "geopandas", "rasterio", "shapely", "numpy", "pyyaml"],
-  "author": [{"@type": "Person", "givenName": "Leonidas", "familyName": "Liakos",
-              "@id": "https://orcid.org/0000-0003-1961-6940",
-              "affiliation": {"@type": "Organization", "name": "University of Thessaly"}}],
-  "keywords": ["χωροθέτηση", "viewshed", "Natura 2000", "reproducible research"]
+  "softwareRequirements": [
+    "gdal>=3.6",
+    "geopandas>=1.0",
+    "rasterio>=1.3",
+    "shapely>=2.0",
+    "numpy",
+    "pyyaml"
+  ],
+  "url": "https://github.com/kokkytos/xorothetisi-aiolikon",
+  "version": "1.0.0"
 }

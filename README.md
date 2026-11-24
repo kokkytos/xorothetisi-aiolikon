@@ -1,3 +1,5 @@
+[![DOI](https://sandbox.zenodo.org/badge/DOI/10.5072/zenodo.647573.svg)](https://handle.test.datacite.org/10.5072/zenodo.647573)
+
 # Περιγραφή
 
 Αναπαραγώγιμη ανάλυση χωροθέτησης ανεμογεννητριών στην ΠΕ Ιωαννίνων. Εφαρμόζει κριτήρια ταχύτητας ανέμου, κλίσης
@@ -15,6 +17,7 @@ data/processed/      αποτελέσματα + provenance.json + datapackage.js
 CITATION.cff, codemeta.json, LICENSE
 ```
 
+
 ## Αναπαραγωγή
 
 ```bash
@@ -27,6 +30,15 @@ make run       # παράγει data/processed/*
 Σε κάθε εκτέλεση αποθηκεύονται αυτόματα οι παράμετροι, τα SHA-256 των εισόδων, οι εκδόσεις
 των βιβλιοθηκών και το git commit στο `data/processed/provenance.json`.
 Μετά από επιτυχημένη εκτέλεση τρέξε `make lock` και κάνε commit το `environment.lock.txt`.
+
+Το `codemeta.json` **δεν γράφεται με το χέρι**: παράγεται από το `CITATION.cff`
+και το `codemeta.extra.json` (τεχνικά πεδία). Μετά από κάθε αλλαγή στο `CITATION.cff` ή πριν από κάθε release:
+
+```bash
+make codemeta          # επικύρωση του CITATION.cff + αναπαραγωγή του codemeta.json
+make check-codemeta    # αποτυγχάνει αν το codemeta.json είναι παλιό (για CI)
+```
+
 
 ## Μεθοδολογικές παραδοχές
 
