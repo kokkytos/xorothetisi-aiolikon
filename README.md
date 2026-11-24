@@ -49,8 +49,8 @@ make check-codemeta    # αποτυγχάνει αν το codemeta.json είνα
 
 ## FAIR
 
-| Αρχή | Πώς καλύπτεται | Κατάσταση |
-|---|---|---|
+| Αρχή | Πώς καλύπτεται |
+|---|---|
 | F1 Μόνιμο αναγνωριστικό | DOI από το Zenodo |
 | F2 Πλούσια μεταδεδομένα | `CITATION.cff`, `codemeta.json`, `datapackage.json` |
 | F3 Τα μεταδεδομένα περιέχουν το αναγνωριστικό των δεδομένων | path + SHA-256 στο `datapackage.json`, DOI στο `CITATION.cff` |
@@ -63,7 +63,7 @@ make check-codemeta    # αποτυγχάνει αν το codemeta.json είνα
 | R1 Επαρκή χαρακτηριστικά | schema πεδίων στο `datapackage.json` |
 | R1.1 Άδεια χρήσης | MIT για τον κώδικα, CC BY 4.0 για τα αποτελέσματα | 
 | R1.2 Provenance | `provenance.json` (παράμετροι, hashes, εκδόσεις, commit)|
-| R1.3 Πρότυπα κοινότητας | Frictionless, CFF, CodeMeta | Προαιρετικά: ISO 19115/INSPIRE |
+| R1.3 Πρότυπα κοινότητας | Frictionless, CFF, CodeMeta |
 
 
 ## Άδειες
